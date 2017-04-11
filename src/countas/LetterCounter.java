@@ -13,11 +13,13 @@ public class LetterCounter {
     FileHandler handler = new FileHandler();
     List<String> baseLines = handler.readFromFile(Paths.get(fileName));
     int count = 0;
-    for (String line :
-            baseLines) {
-      for (int i = 0; i < line.length(); i++) {
-        if (line.toLowerCase().charAt(i) == letter) {
-          count++;
+    if (baseLines != null) {
+      for (String line :
+              baseLines) {
+        for (int i = 0; i < line.length(); i++) {
+          if (line.toLowerCase().charAt(i) == letter) {
+            count++;
+          }
         }
       }
     }
