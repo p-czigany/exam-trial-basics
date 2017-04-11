@@ -15,8 +15,6 @@ public class FileHandler {
     try {
       return Files.readAllLines(fileLocation);
     } catch (IOException ex) {
-      System.out.println(
-              "I/O Exception occurred while trying to read from file: " + fileLocation.toString());
       return null;
     }
   }
