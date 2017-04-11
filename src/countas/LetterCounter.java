@@ -16,7 +16,7 @@ public class LetterCounter {
     for (String line :
             baseLines) {
       for (int i = 0; i < line.length(); i++) {
-        if (line.charAt(i) == letter) {
+        if (line.toLowerCase().charAt(i) == letter) {
           count++;
         }
       }
