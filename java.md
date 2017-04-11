@@ -32,4 +32,8 @@ The application is accepted if:
 ## 5. Question time! (~15 mins) [2p]
 
 ### How can you generate a random number? [2p]
-#### Your answer: [add your answer here]
+#### Your answer:
+##### (_casting type_) (Math.random() * _range_) + _minimum value_
+The random() static function of the Math class generates a double typed random number between 0 and 1, including the former and excluding the latter. We can strech or contract this range by a multiplication. (Math.random() * 10 generates numbers between 0 and 10.)
+If we want more distinct, for example integer type values, we can cast these doubles by putting "(int)" before the function. ((int) (Math.random() * 10) will give a random whole number between 0 and 9.)
+If we don't want our range to start from zero up, we can modify the statement by simply adding the bottom of the range. ((int) Math.random() * 10 - 5 will give values from -5 to +4.
